@@ -8,11 +8,10 @@
 
 // @todo: Вывести карточки на страницу
 
-const content = document.querySelector(".content");
-const placesList = content.querySelector(".places__list");
+const cardTemplate = document.querySelector("#card-template").content;
+const placesList = document.querySelector(".places__list");
 
 function createCard(data, onDelete) {
-  const cardTemplate = document.querySelector("#card-template").content;
   const cardElement = cardTemplate.cloneNode(true).querySelector(".card");
 
   cardElement.querySelector(".card__image").src = data.link;
